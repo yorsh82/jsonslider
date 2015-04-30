@@ -23,6 +23,8 @@
 			first = figs.first();
 
 			first.addClass( active );
+			
+			console.log( active );
 
 			figs.not(first).hide();
 

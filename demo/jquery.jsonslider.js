@@ -6,6 +6,7 @@
 			},
 			cfg = $.extend(true, def, options),
 			store = cfg.json,
+			active = cfg.Class,
 			$wrap = $(this);
 
 		$.getJSON(store, function(data) {
@@ -21,15 +22,17 @@
 			figs = $wrap.children();
 			first = figs.first();
 
-			first.addClass( Class );
+			first.addClass( active );
+			
+			console.log( active );
 
 			figs.not(first).hide();
 
-			function slider() {
+			function slider( e ) {
 				var $next,
-					$active = $( Class );
+					$active = $( e );
 					
-					console.log( Class );
+					console.log( $active );
 
 				if ($active.next().length === 0) {
 					$next = figs.first();
@@ -38,16 +41,16 @@
 				}
 
 				$active.fadeOut(1000, function() {
-					$(this).removeClass( Class );
+					$(this).removeClass( active );
 				});
 				$next.fadeIn(1000, function() {
-					$(this).addClass( Class );
+					$(this).addClass( active );
 				});
 			}
 
 			setTimeout(
 				setInterval(function() {
-					slider();
+					slider( active );
 				}, 4000), 5000);
 
 		});
