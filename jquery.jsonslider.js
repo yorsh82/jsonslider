@@ -2,7 +2,7 @@
 	$.fn.jsonSlider = function(options) {
 		var def = {
 				json: undefined,
-				active: 'slider-active'
+				Class: 'slider-active'
 			},
 			cfg = $.extend(true, def, options),
 			store = cfg.json,
@@ -21,13 +21,15 @@
 			figs = $wrap.children();
 			first = figs.first();
 
-			first.addClass('slider-active');
+			first.addClass( Class );
 
 			figs.not(first).hide();
 
 			function slider() {
 				var $next,
-					$active = $('.slider-active');
+					$active = $( Class );
+					
+					console.log( Class );
 
 				if ($active.next().length === 0) {
 					$next = figs.first();
@@ -36,10 +38,10 @@
 				}
 
 				$active.fadeOut(1000, function() {
-					$(this).removeClass('slider-active');
+					$(this).removeClass( Class );
 				});
 				$next.fadeIn(1000, function() {
-					$(this).addClass('slider-active');
+					$(this).addClass( Class );
 				});
 			}
 
