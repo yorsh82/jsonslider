@@ -9,6 +9,11 @@ JSONslider is a simple jQuery slider for pictures stored dynamically in a JSON f
 
 **This is a beta version, it has not been fully tested**
 
+## DOWNLOAD
+
+* Git: `$ git https://github.com/dcdeiv/jsonslider.git`
+* Bower: `$ bower install jsonslider`
+
 ## SET UP
 
 ### 1 - Set up the JSON file
