@@ -1,5 +1,5 @@
 # JSONslider
-JSONslider is a simple fade slideshow for pictures stored dynamically in a JSON file you can edit without messing up your HTML.
+JSONslider is a simple jQuery slider for pictures stored dynamically in a JSON file you can edit without messing up your HTML..
 
 <hr />
 
