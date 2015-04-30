@@ -6,6 +6,7 @@
 			},
 			cfg = $.extend(true, def, options),
 			store = cfg.json,
+			active = cfg.Class,
 			$wrap = $(this);
 
 		$.getJSON(store, function(data) {
@@ -21,13 +22,13 @@
 			figs = $wrap.children();
 			first = figs.first();
 
-			first.addClass( Class );
+			first.addClass( active );
 
 			figs.not(first).hide();
 
-			function slider(a) {
+			function slider( e ) {
 				var $next,
-					$active = $( a );
+					$active = $( e );
 					
 					console.log( $active );
 
@@ -47,7 +48,7 @@
 
 			setTimeout(
 				setInterval(function() {
-					slider(Class);
+					slider( active );
 				}, 4000), 5000);
 
 		});
