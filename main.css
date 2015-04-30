@@ -7,6 +7,7 @@ body {
 
 img, figure {
   max-width: 100%;
+  margin: 0 auto;
   height: auto;
   line-height: 0;
 }
@@ -24,6 +25,7 @@ header {
 .slider {
   width: 500px;
   position: relative;
+  margin: 0 auto;
 }
 .slider figure {
   position: absolute;
