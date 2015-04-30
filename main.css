@@ -10,6 +10,21 @@ body {
   background-color: #1a1a1a;    
 }
 
+img, figure {
+  max-width: 100%;
+  height: auto;
+  line-height: 0; }
+
+header {
+  padding: 2em;
+}
+
 .container {
   max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider figure {
+  position: absolute;
 }
