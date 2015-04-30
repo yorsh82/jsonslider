@@ -25,11 +25,11 @@
 
 			figs.not(first).hide();
 
-			function slider() {
+			function slider(a) {
 				var $next,
-					$active = $( Class );
+					$active = $( a );
 					
-					console.log( Class );
+					console.log( $active );
 
 				if ($active.next().length === 0) {
 					$next = figs.first();
@@ -47,7 +47,7 @@
 
 			setTimeout(
 				setInterval(function() {
-					slider();
+					slider(Class);
 				}, 4000), 5000);
 
 		});
