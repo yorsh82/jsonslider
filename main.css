@@ -1,9 +1,4 @@
-@charset "UTF-8";
-/*web fonts*/
-@import url("//fonts.googleapis.com/css?family=Open%20Sans%3A400%2C500%2C700|Source%20Sans%20Pro%3A400%2C500%2C700|Cookie&subset=latin%2Clatin-ext");
-
 body {
-  font-family 'open sans', sans;
   font-size: 16px;
   font-weight: 300;
   color:#fff;
@@ -13,7 +8,8 @@ body {
 img, figure {
   max-width: 100%;
   height: auto;
-  line-height: 0; }
+  line-height: 0;
+}
 
 header {
   padding: 2em;
@@ -25,6 +21,10 @@ header {
   position: relative;
 }
 
+.slider {
+  width: 500px;
+  position: relative;
+}
 .slider figure {
   position: absolute;
 }
