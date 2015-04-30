@@ -1,6 +1,10 @@
 # JSONslider
 JSONslider is a simple fade slideshow for pictures stored dynamically in a JSON file you can edit without messing up your HTML.
 
+<hr>
+<a href="https://flattr.com/submit/auto?user_id=dcdeiv&url=http%3A%2F%2Fwww.github.com%2Fdcdeiv%2Fjsonslider" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+</hr>
+
 **This is a beta version, it has not been fully tested**
 
 ## SET UP
