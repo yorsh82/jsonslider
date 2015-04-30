@@ -19,7 +19,18 @@
                 });
 
             for (i = 0; i < arr.length; i++) {
-                $wrap.append($('<figure><img src="' + arr[i].url + '" alt="' + arr[i].alt + '"/></figure>'));
+            	var url = arr[i].url;
+            	var img = $('<img src="'+ url +'">').load(function(){
+            		var imgW = this.width,
+            			imgH = this.height;
+            			
+            			img.attr({
+            				width: imgW,
+            				height: imgH
+            			});
+            	});
+            	
+            	$wrap.append( '<figure>' + img + '</figure>' );
             }
 
             figs = $wrap.children();
