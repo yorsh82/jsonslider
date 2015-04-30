@@ -28,8 +28,8 @@
 
 			function slider( e ) {
 				var $next,
-					$S = '.' + e;
-					$active = $( $S );
+					cl = e,
+					$active = $( '.' + e );
 					
 					console.log( $active );
 
