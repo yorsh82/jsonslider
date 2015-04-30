@@ -39,10 +39,10 @@
 				}
 
 				$active.fadeOut(1000, function() {
-					$(this).removeClass( Class );
+					$(this).removeClass( active );
 				});
 				$next.fadeIn(1000, function() {
-					$(this).addClass( Class );
+					$(this).addClass( active );
 				});
 			}
 
