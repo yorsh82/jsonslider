@@ -23,14 +23,13 @@
 			first = figs.first();
 
 			first.addClass( active );
-			
-			console.log( active );
 
 			figs.not(first).hide();
 
 			function slider( e ) {
 				var $next,
-					$active = $( e );
+					$S = '.' + e;
+					$active = $( $S );
 					
 					console.log( $active );
 
@@ -41,10 +40,10 @@
 				}
 
 				$active.fadeOut(1000, function() {
-					$(this).removeClass( active );
+					$(this).removeClass( e );
 				});
 				$next.fadeIn(1000, function() {
-					$(this).addClass( active );
+					$(this).addClass( e );
 				});
 			}
 
