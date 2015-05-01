@@ -53,7 +53,7 @@
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
-			var parentStyle = {},
+			var parentStyle = [],
 				newStyle = $.extend( true, css.parent, parentStyle );
 			
 			//if landscape
