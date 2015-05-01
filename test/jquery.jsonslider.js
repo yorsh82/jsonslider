@@ -47,26 +47,29 @@
 
 		$parent.append('<div>');
 		$wrap = $parent.children();
+		
+		var $parentH = parseInt( $parent.css( 'height' ) );
 
 		$(window).resize(function() {
 			var $parentW = parseInt( $parent.css( 'width' ) ),
-				$parentH = parseInt( $parent.css( 'height' ) ),
 				parentStyle = { height: $parentW/arI },
 				newStyle = $.extend( {}, css.parent, parentStyle );
 				
-			$( 'body' ).append(
-				$( '<div>w = ' + $parentH + '</div>' ).css({
+				var ghost = {
 					position: 'fixed',
 					top: 0,
 					left: 0,
-					z-index: 500000,
-					});
-				);
+					zIndex: 500000
+					};
+				
+			$( 'body' ).append( $( '<div>w = ' + $parentW + '</div>' ).css(ghost));
 				
 		console.log( $parentH );
 			
 			if ( $parentH === 0 ) {
 				$parent.css( newStyle )
+			} else {
+				$parent.css( 'height', $parentH );
 			}
 			
 			/* test later
