@@ -48,16 +48,13 @@
 		
 		console.log( $parentH );
 		console.log( $parentW );
-		
-		console.log( $parentW );
-		console.log( $parentH );
 
 		$parent.append('<div>');
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
 		
-			if ( $parentH = 0 ) {
+			if ( $parentH === 0 ) {
 				console.log( 'undefined' );
 			} else {
 				console.log( 'defined' );
