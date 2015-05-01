@@ -88,7 +88,7 @@
 			
 			$img = $figs.each(function() {
 				return $( this ).children();
-				};
+				});
 			
 			console.log( $img );
 
