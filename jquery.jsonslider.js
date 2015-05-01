@@ -30,7 +30,7 @@
             			});
             	});
             	
-            	$wrap.append( '<figure>' + img + '</figure>' );
+            	$wrap.append( $('<figure/>').append(img) );
             }
 
             figs = $wrap.children();
