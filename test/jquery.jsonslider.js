@@ -31,7 +31,7 @@
 					}
 				}
 			},
-			cfg		= $.extend(true, def, options),
+			cfg		= $.extend( true, def, options ),
 			store	= cfg.json,
 			active	= cfg.Class,
 			orient	= cfg.orientation,
@@ -53,13 +53,17 @@
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
+			var parentStyle = {},
+				newStyle = $.extend( true, css.parent, parentStyle );
+			
+			//if landscape
+			parentStyle.push( 'height', ($parentW / arI));
 		
 			if ( $parentH === 0 ) {
-				console.log( 'undefined' );
-			} else {
-				console.log( 'defined' );
+				$parent.css( parentStyle )
 			}
 			
+			/* test later
 			if ('landscape' === orient) {
 				newHeight = $parentW / arI;
 
@@ -69,6 +73,7 @@
 
 				$wrap.height(newHeight);
 			}
+			*/
 
 			$wrap.css( css.wrap );
 		});
