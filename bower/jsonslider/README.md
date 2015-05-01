@@ -9,6 +9,11 @@ JSONslider is a simple jQuery slider for pictures stored dynamically in a JSON f
 
 **This is a beta version, it has not been fully tested**
 
+## DOWNLOAD
+
+* Git: `$ git https://github.com/dcdeiv/jsonslider.git`
+* Bower: `$ bower install jsonslider`
+
 ## SET UP
 
 ### 1 - Set up the JSON file
@@ -32,12 +37,14 @@ Give a unique ID or a class to an empty `<div>` in your `HTML`:
 ### 3 - Run the function
 This is an example of how the function must be called with all available options.
 
-  $( document ).ready(function() {
-  	$( '.your-class' ).jsonSlider({
-  		json: 'path-to-your-json-file.json',
-  		Class: 'slider-active' //default class
-  	});
-  });
+    $( document ).ready(function() {
+      	$( '.your-class' ).jsonSlider({
+      		json: 'path-to-your-json-file.json',
+      		Class: 'slider-active' //default class
+      		orientation: 'landscape', //portrait not tested yet
+      		aspectRatio: '16:9' //aspect ratio of the slider. Chose it according to pictures aspect ratio.
+      	});
+    });
 
 For compatibility issues I added the option `Class` that lets you set a custom class to call the *active element*.
 By default the class is `'slider-active`.
