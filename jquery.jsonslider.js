@@ -5,11 +5,15 @@
     $.fn.jsonSlider = function(options) {
         var def = {
                 json: undefined,
-                Class: 'slider-active'
+                Class: 'slider-active',
+                orientation: 'landscape', //'portrait'
+                aspectRatio: '16:9';
             },
             cfg = $.extend(true, def, options),
             store = cfg.json,
             active = cfg.Class,
+            orient = cfg.orientation,
+            aspect = cfg.aspectRatio,
             $wrap = $(this);
 
         $.getJSON(store, function(data) {
@@ -30,7 +34,7 @@
             			});
             	});
             	
-            	$wrap.append( $('<figure/>').append(img) );
+            	$wrap.append( $('<figure/>').append( img ) );
             }
 
             figs = $wrap.children();
