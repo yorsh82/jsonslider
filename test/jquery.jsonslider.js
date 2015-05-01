@@ -3,7 +3,7 @@
 // GPLv2 http://www.gnu.org/licenses/gpl-2.0-standalone.html
 (function($) {
 	$.fn.jsonSlider = function(options) {
-		var $wrapW, newHeight, wrap,
+		var $wrapW, $wrapH, newHeight, wrap,
 			def = {
 				json: undefined,
 				Class: 'slider-active',
@@ -22,11 +22,19 @@
 			arI = ARx / ARy;
 
 		$wrapW = $wrap.width();
+		$wrapH = $wrap.height();
 
 		$wrap.append('<div>');
 		wrap = $wrap.children();
 
 		$(window).resize(function() {
+		
+			if ( $wrapH === undefined ) {
+				console.log( 'undefined' );
+			} else {
+				console.log( 'defined' );
+			}
+			
 			if ('landscape' === orient) {
 				newHeight = $wrapW / arI;
 
@@ -39,8 +47,8 @@
 
 			wrap.css({
 				position: 'relative',
-				width: $wrapW,
-				minHeight: newHeight,
+				width: '100%,
+				height: newHeight,
 				margin: '0 auto',
 				padding: 0,
 				backgroundColor: 'inherit',
