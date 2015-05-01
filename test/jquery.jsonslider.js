@@ -10,7 +10,9 @@
 				orientation: 'landscape', //'portrait'
 				aspectRatio: '16:9',
 				css: {
-					parent: {},
+					parent: {
+						position: 'relative'
+					},
 					wrap: {
 						position: 'relative',
 						width: '100%',
@@ -54,10 +56,13 @@
 
 		$(window).resize(function() {
 			var parentStyle = [],
-				newStyle = $.extend( true, css.parent, parentStyle );
+				defStyle = css.parent,
+				newStyle = $.extend( true, defStyle, parentStyle );
 			
 			//if landscape
-			parentStyle.push( 'height', ($parentW / arI));
+			console.log( parentStyle );
+			console.lol( defStyle );
+			console.log( newStyle );
 		
 			if ( $parentH === 0 ) {
 				$parent.css( parentStyle )
