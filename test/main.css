@@ -18,7 +18,6 @@ header {
 }
 
 .container {
-  max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
@@ -33,4 +32,10 @@ header {
 section {
   position: relative;
   z-index: 1000000000;
+}
+
+@media all and (min-width: 768px) {
+	.slider {
+		height: 300px;
+	}
 }

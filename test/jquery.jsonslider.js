@@ -3,7 +3,7 @@
 // GPLv2 http://www.gnu.org/licenses/gpl-2.0-standalone.html
 (function($) {
 	$.fn.jsonSlider = function(options) {
-		var $parentW, $parentH, newHeight, $wrap,
+		var newHeight, $wrap,
 			def = {
 				json: undefined,
 				Class: 'slider-active',
@@ -45,23 +45,18 @@
 			ARy		= parseInt(AR[1]),
 			arI		= ARx / ARy;
 
-		$parentW = parseInt( $parent.css( 'width' ) );
-		$parentH = parseInt( $parent.css( 'height' ) );
-		
-		console.log( $parentH );
-		console.log( $parentW );
-
 		$parent.append('<div>');
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
 			var parentStyle = { height: $parentW/arI },
-				newStyle = $.extend( {}, css.parent, parentStyle );
-			
-			//if landscape
-			console.log( parentStyle );
-			console.log( newStyle );
+				newStyle = $.extend( {}, css.parent, parentStyle ),
+				$parentW = parseInt( $parent.css( 'width' ) );
+				$parentH = parseInt( $parent.css( 'height' ) );
 		
+		console.log( $parentH );
+		console.log( $parentW );
+			
 			if ( $parentH === 0 ) {
 				$parent.css( newStyle )
 			}
