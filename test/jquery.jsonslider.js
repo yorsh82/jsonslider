@@ -55,7 +55,6 @@
 				newStyle = $.extend( {}, css.parent, parentStyle );
 				
 		console.log( $parentH );
-		console.log( $parentW );
 			
 			if ( $parentH === 0 ) {
 				$parent.css( newStyle )
@@ -88,12 +87,6 @@
 
 			$figs = $wrap.children();
 			$figs.css( css.figure );
-			
-			$img = $figs.each(function() {
-				return $( this ).children();
-				});
-			
-			console.log( $img );
 
 			$first = $figs.first();
 
