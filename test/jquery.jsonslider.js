@@ -55,18 +55,15 @@
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
-			var parentStyle = [],
-				defStyle = css.parent,
-				newStyle = $.extend( true, defStyle, parentStyle );
+			var parentStyle = { height: $parentW/arI },
+				newStyle = $.extend( {}, css.parent, parentStyle );
 			
 			//if landscape
-			parentStyle.push( 'height', $parentW/arI );
 			console.log( parentStyle );
-			console.log( defStyle );
 			console.log( newStyle );
 		
 			if ( $parentH === 0 ) {
-				$parent.css( parentStyle )
+				$parent.css( newStyle )
 			}
 			
 			/* test later
