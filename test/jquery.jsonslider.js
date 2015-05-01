@@ -43,10 +43,11 @@
 			ARy		= parseInt(AR[1]),
 			arI		= ARx / ARy;
 
-		$parentW = $parent.width();
-		$parentH = $parent.height();
+		$parentW = $parent.css( 'width' );
+		$parentH = $parent.css( 'height' );
 		
 		console.log( $parentH );
+		console.log( $parentW );
 		
 		console.log( $parentW );
 		console.log( $parentH );
