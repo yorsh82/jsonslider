@@ -49,11 +49,11 @@
 		$wrap = $parent.children();
 
 		$(window).resize(function() {
-			var parentStyle = { height: $parentW/arI },
-				newStyle = $.extend( {}, css.parent, parentStyle ),
-				$parentW = parseInt( $parent.css( 'width' ) );
-				$parentH = parseInt( $parent.css( 'height' ) );
-		
+			var $parentW = parseInt( $parent.css( 'width' ) ),
+				$parentH = parseInt( $parent.css( 'height' ) ),
+				parentStyle = { height: $parentW/arI },
+				newStyle = $.extend( {}, css.parent, parentStyle );
+				
 		console.log( $parentH );
 		console.log( $parentW );
 			
