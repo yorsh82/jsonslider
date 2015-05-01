@@ -54,6 +54,15 @@
 				parentStyle = { height: $parentW/arI },
 				newStyle = $.extend( {}, css.parent, parentStyle );
 				
+			$( 'body' ).append(
+				$( '<div>w = ' + $parentH + '</div>' ).css({
+					position: 'fixed',
+					top: 0,
+					left: 0,
+					z-index: 500000,
+					});
+				);
+				
 		console.log( $parentH );
 			
 			if ( $parentH === 0 ) {
