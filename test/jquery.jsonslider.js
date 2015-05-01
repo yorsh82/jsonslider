@@ -21,7 +21,7 @@
 						overflow: 'hidden'
 					},
 					figure: {
-						position: absolute
+						position: 'absolute'
 					},
 					img: {
 						width: 'auto',
