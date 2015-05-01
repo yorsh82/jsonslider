@@ -1,6 +1,6 @@
 {
   "name": "jsonslider",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "http://www.github.com/dcdeiv/jsonslider",
   "authors": [
     "dcdeiv <davide.dicriscito@gmail.com>"
@@ -22,14 +22,14 @@
     "test",
     "tests"
   ],
-  "_release": "0.2.0",
+  "_release": "0.3.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.0",
-    "commit": "a89a1f45b904e56f47f3c43b0019197b3a676362"
+    "tag": "v0.3.0",
+    "commit": "b0c5f2304190eb87c44c99579045abf3edd50b16"
   },
   "_source": "git://github.com/dcdeiv/jsonslider.git",
-  "_target": "0.2.0",
+  "_target": "~0.3.0",
   "_originalSource": "jsonslider",
   "_direct": true
 }
