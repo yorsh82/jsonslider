@@ -57,7 +57,7 @@
 
 		$(window).resize(function() {
 		
-			if ( $parentH === undefined ) {
+			if ( $parentH = 0 ) {
 				console.log( 'undefined' );
 			} else {
 				console.log( 'defined' );
