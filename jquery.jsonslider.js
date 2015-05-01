@@ -1,4 +1,4 @@
-//JSONslider v.0.1.0
+//JSONslider v.0.2.0
 //http://www.github.com/dcdeiv/jsonslider
 // GPLv2 http://www.gnu.org/licenses/gpl-2.0-standalone.html
 (function($) {
