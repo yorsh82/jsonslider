@@ -96,7 +96,7 @@
 
 			$first.addClass( active );
 
-			$figs.not(first).hide();
+			$figs.not( $first ).hide();
 
 			function slider(e) {
 				var $next,
