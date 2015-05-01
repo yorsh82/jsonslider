@@ -60,8 +60,9 @@
 				newStyle = $.extend( true, defStyle, parentStyle );
 			
 			//if landscape
+			parentStyle.push( 'height', $parentW/arI );
 			console.log( parentStyle );
-			console.lol( defStyle );
+			console.log( defStyle );
 			console.log( newStyle );
 		
 			if ( $parentH === 0 ) {
