@@ -46,6 +46,8 @@
 		$parentW = $parent.width();
 		$parentH = $parent.height();
 		
+		console.log( $parentH );
+		
 		console.log( $parentW );
 		console.log( $parentH );
 
