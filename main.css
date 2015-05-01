@@ -6,6 +6,7 @@ body {
 }
 
 img, figure {
+  width: auto;
   max-width: 100%;
   margin: 0 auto;
   height: auto;
@@ -23,10 +24,17 @@ header {
 }
 
 .slider {
-  width: 500px;
+  width: 100%;
   position: relative;
   margin: 0 auto;
+  z-index: 1;
 }
 .slider figure {
+  width: 100%;
   position: absolute;
+}
+
+section {
+  position: relative;
+  z-index: 1000000000;
 }
