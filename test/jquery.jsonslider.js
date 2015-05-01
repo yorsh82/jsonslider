@@ -80,7 +80,7 @@
 				});
 
 			for (i = 0; i < arr.length; i++) {
-				wrap.append($('<figure><img src="' + arr[i].url + '" alt="' + arr[i].alt + '"/></figure>'));
+				$wrap.append($('<figure><img src="' + arr[i].url + '" alt="' + arr[i].alt + '"/></figure>'));
 			}
 
 			$figs = $wrap.children();
