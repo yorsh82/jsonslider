@@ -3,61 +3,78 @@
 // GPLv2 http://www.gnu.org/licenses/gpl-2.0-standalone.html
 (function($) {
 	$.fn.jsonSlider = function(options) {
-		var $wrapW, $wrapH, newHeight, wrap,
+		var $parentW, $parentH, newHeight, $wrap,
 			def = {
 				json: undefined,
 				Class: 'slider-active',
 				orientation: 'landscape', //'portrait'
-				aspectRatio: '16:9'
+				aspectRatio: '16:9',
+				css: {
+					parent: {},
+					wrap: {
+						position: 'relative',
+						width: '100%',
+						height: '100%',
+						margin: '0 auto',
+						padding: 0,
+						backgroundColor: 'inherit',
+						overflow: 'hidden'
+					},
+					figure: {
+						position: absolute
+					},
+					img: {
+						width: 'auto',
+						maxWidth: '100%',
+						lineHeight: 0,
+						margin: '0 auto'
+					}
+				}
 			},
-			cfg = $.extend(true, def, options),
-			store = cfg.json,
-			active = cfg.Class,
-			orient = cfg.orientation,
-			aspect = cfg.aspectRatio,
-			$wrap = $(this),
-			AR = aspect.split(':'),
-			ARx = parseInt(AR[0]),
-			ARy = parseInt(AR[1]),
-			arI = ARx / ARy;
+			cfg		= $.extend(true, def, options),
+			store	= cfg.json,
+			active	= cfg.Class,
+			orient	= cfg.orientation,
+			aspect	= cfg.aspectRatio,
+			css		= cfg.css,
+			$parent	= $(this),
+			AR		= aspect.split(':'),
+			ARx		= parseInt(AR[0]),
+			ARy		= parseInt(AR[1]),
+			arI		= ARx / ARy;
 
-		$wrapW = $wrap.width();
-		$wrapH = $wrap.height();
+		$parentW = $parent.width();
+		$parentH = $parent.height();
+		
+		console.log( $parentW );
+		console.log( $parentH );
 
-		$wrap.append('<div>');
-		wrap = $wrap.children();
+		$parent.append('<div>');
+		$wrap = $parent.children();
 
 		$(window).resize(function() {
 		
-			if ( $wrapH === undefined ) {
+			if ( $parentH === undefined ) {
 				console.log( 'undefined' );
 			} else {
 				console.log( 'defined' );
 			}
 			
 			if ('landscape' === orient) {
-				newHeight = $wrapW / arI;
+				newHeight = $parentW / arI;
 
 				$wrap.height(newHeight);
 			} else if ('portrait' === orient) {
-				newHeight = $wrapW * arI;
+				newHeight = $parentW * arI;
 
 				$wrap.height(newHeight);
 			}
 
-			wrap.css({
-				position: 'relative',
-				width: '100%',
-				height: newHeight,
-				margin: '0 auto',
-				padding: 0,
-				backgroundColor: 'inherit',
-				overflow: 'hidden'
-			});
+			$wrap.css( css.wrap );
 		});
 
 		$.getJSON(store, function(data) {
-			var $figs, first, i,
+			var $figs, $first, i, $img,
 				arr = $.map(data, function(el) {
 					return el;
 				});
@@ -66,13 +83,18 @@
 				wrap.append($('<figure><img src="' + arr[i].url + '" alt="' + arr[i].alt + '"/></figure>'));
 			}
 
-			$figs = wrap.children();
+			$figs = $wrap.children();
+			$figs.css( css.figure );
+			
+			$img = $figs.each(function() {
+				return $( this ).children();
+				};
+			
+			console.log( $img );
 
-			$figs.children().height('height', newHeight);
+			$first = $figs.first();
 
-			first = $figs.first();
-
-			first.addClass(active);
+			$first.addClass( active );
 
 			$figs.not(first).hide();
 
