@@ -52,21 +52,14 @@
 
 		$(window).resize(function() {
 			var $parentW = parseInt( $parent.css( 'width' ) ),
+				onRparH = parseInt( $parent.css( 'height' ) ),
 				parentStyle = { height: $parentW/arI },
 				newStyle = $.extend( {}, css.parent, parentStyle );
 				
-				var ghost = {
-					position: 'fixed',
-					top: 0,
-					left: 0,
-					zIndex: 500000
-					};
-				
-			$( 'body' ).append( $( '<div>w = ' + $parentW + '</div>' ).css(ghost));
-				
 		console.log( $parentH );
+		console.log( onRparH );
 			
-			if ( $parentH === 0 ) {
+			if ( onRparH === 0 ) {
 				$parent.css( newStyle )
 			} else {
 				$parent.css( 'height', $parentH );
