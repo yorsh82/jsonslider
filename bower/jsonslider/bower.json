@@ -1,0 +1,25 @@
+{
+  "name": "jsonslider",
+  "version": "0.1.0",
+  "homepage": "http://www.github.com/dcdeiv/jsonslider",
+  "authors": [
+    "dcdeiv <davide.dicriscito@gmail.com>"
+  ],
+  "description": "JSONslider is a simple jQuery slider for pictures stored dynamically in a JSON file you can edit without messing up your HTML.",
+  "main": "jquery.jsonslider.min.js",
+  "keywords": [
+    "jsonslider",
+    "json",
+    "slider",
+    "jquery"
+  ],
+  "license": "GPLv2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ]
+}
