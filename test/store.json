@@ -1,0 +1,26 @@
+{
+	"pictures": [
+		{
+			"url": "http://dcdeiv.github.io/jsonslider/pic/forthbridge.jpg",
+			"alt": "Forth Bridge",
+			"caption": "Taken from South Queensferry looking towards Fife in Scotland. This railway bridge was built in 1890.",
+			"copyright":"https://www.flickr.com/photos/108294605@N06/"
+		},
+		{
+			"url": "http://dcdeiv.github.io/jsonslider/pic/hunting-canmore-alberta-canada.jpg",
+			"alt": "Bridge Hunting Canmore Alberta Canada",
+			"caption": "A walk around Canmore bridge hunting, A lovely day for a walk nice to be back out with my camera, a very nice walk around with absent friends.",
+			"copyright":"https://www.flickr.com/photos/davebloggs007"
+		},
+		{
+			"url": "http://dcdeiv.github.io/jsonslider/pic/sacramento-river.jpg",
+			"alt": "Bridge on the Sacramento River",
+			"copyright":"https://www.flickr.com/photos/livenature/"
+		},
+		{
+			"url": "http://dcdeiv.github.io/jsonslider/pic/rfk.jpg",
+			"alt": "RFK at sunrise",
+			"copyright":"https://www.flickr.com/photos/mtaphotos/"
+		}
+	]
+}

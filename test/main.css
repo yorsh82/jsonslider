@@ -1,0 +1,40 @@
+body {
+  font-size: 16px;
+  font-weight: 300;
+  color:#fff;
+  background-color: #1a1a1a;    
+}
+
+img, figure {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  line-height: 0;
+}
+
+header {
+  padding: 2em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+.slider figure {
+  width: 100%;
+  position: absolute;
+}
+
+section {
+  position: relative;
+  z-index: 1000000000;
+}
