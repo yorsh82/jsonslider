@@ -28,7 +28,6 @@
 
 		$(window).resize(function() {
 			if ('landscape' === orient) {
-				//calculating height
 				newHeight = $wrapW / arI;
 
 				$wrap.height(newHeight);
