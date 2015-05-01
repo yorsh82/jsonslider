@@ -47,7 +47,7 @@
 
 			wrap.css({
 				position: 'relative',
-				width: '100%,
+				width: '100%',
 				height: newHeight,
 				margin: '0 auto',
 				padding: 0,
